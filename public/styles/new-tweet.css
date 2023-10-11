@@ -1,0 +1,58 @@
+/* Add this CSS to your existing CSS or a new CSS file */
+
+section.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.new-tweet textarea {
+  border: none;
+  border-bottom: 3px solid #000;
+  background: transparent;
+  width: 100%;
+  resize: none; /* Disable textarea resizing */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+section.new-tweet form {
+  width: 100%;
+}
+
+/* section.new-tweet label {
+  display: flex;
+  font-weight: bold;
+} */
+
+section.new-tweet div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section.new-tweet button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #013b62;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Bungee', sans-serif;
+  display: flex;
+}
+
+
+section.new-tweet button:hover {
+  background-color: #2980b9;
+}
+
+section.new-tweet .counter {
+  font-size: 20px;
+  color: #000;
+  font-family: 'Bungee', sans-serif;
+}
+
+.counter.invalid {
+  color: red !important;
+}

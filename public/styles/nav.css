@@ -1,0 +1,33 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+}
+
+nav span {
+  font-size: xx-large;
+  font-family: "Bungee", sans-serif;
+  padding: 1.5em;
+}
+
+.containerNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5em;
+}
+
+#iconAngle {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+#newTweetNav {
+  font-family: sans-serif;
+}
