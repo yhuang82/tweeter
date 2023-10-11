@@ -1,4 +1,4 @@
-header {
+.user-profile {
   height: 520px; /* Height minus nav height */
   width: 100%;
   background-color: #DAA520;
@@ -8,8 +8,7 @@ header {
   align-items: center;
   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
 }
-
-header h2 {
+.user-profile h2 {
   margin-top: -35px; /* Adjust spacing from avatar to name */
   font-size: 45px; /* Adjust as needed */
   font-weight: bold;
