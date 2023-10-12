@@ -22,12 +22,8 @@ section.new-tweet form {
   width: 100%;
 }
 
-/* section.new-tweet label {
-  display: flex;
-  font-weight: bold;
-} */
 
-section.new-tweet div {
+section.button-submit {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

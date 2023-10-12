@@ -41,6 +41,9 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Include timeago.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -52,10 +55,6 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script
-      type="text/javascript"
-      src="/scripts/composer-char-counter.js"
-    ></script>
   </head>
 
   <body>
@@ -91,34 +90,13 @@
             id="tweet-text"
             placeholder="What are you humming about?"
           ></textarea>
-          <div>
+          <div class="button-submit">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <div class="tweets-container"></div>
       </section>
-      <article class="tweet">
-        <header>
-          <div class="user-info">
-            <img src="/images/happiness.png" alt="Profile Image" />
-            <div class="user-details">
-              <h3>User Name</h3>
-              <p>@username</p>
-            </div>
-          </div>
-        </header>
-        <div class="tweet-content">
-          <p>Don't forget: Commit and push your work to the Git repo!</p>
-        </div>
-        <footer>
-          <p>10 days ago</p>
-          <div class="tweet-action">
-            <i class="fas fa-reply icon-blue"></i>
-            <i class="fas fa-retweet icon-blue"></i>
-            <i class="fas fa-heart icon-red"></i>
-          </div>
-        </footer>
-      </article>
     </main>
   </body>
 </html>
