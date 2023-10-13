@@ -1,7 +1,12 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: rgba(171, 205, 239, 0); /* Adjust alpha (transparency) as needed */
+  background-color: rgba(
+    171,
+    205,
+    239,
+    0
+  ); /* Adjust alpha (transparency) as needed */
   color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -10,8 +15,6 @@ nav {
   z-index: 6;
   top: 0;
 }
-
-
 
 nav span {
   font-size: xx-large;
@@ -26,18 +29,41 @@ nav span {
   padding: 1.5em;
 }
 
-#iconAngle {
-  display: flex;
-  justify-content: center;
-  padding: 0.5em;
-}
+
 
 #newTweetNav {
   font-family: sans-serif;
 }
 
 
+/* for the clickable icon in the nav bar */
 
+@keyframes rockingAnimation {
+  0%, 100% {
+    transform: translateY(0); /* Start and end position */
+  }
+  50% {
+    transform: translateY(-5px); /* Middle position - move up */
+  }
+}
+
+#iconAngle {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  color: #ff0000;
+  animation: rockingAnimation 1s infinite; /* Infinite rocking */
+}
+
+#iconAngle:hover {
+  cursor: pointer;
+  animation: none; /* Pause the rocking on hover */
+}
+
+
+
+
+/* for responsive design */
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: rgb(57, 57, 191);

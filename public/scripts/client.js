@@ -83,8 +83,9 @@ $(document).ready(function () {
     if (tweetContent.length > 140) {
       // Display error message
       $("#error-message")
-        .text(alertEmoji +
-          "Tweet content exceeds the maximum character limit (140 characters)."
+        .text(
+          alertEmoji +
+            "Tweet content exceeds the maximum character limit (140 characters)."
         )
         .slideDown();
       return;
@@ -121,4 +122,9 @@ $(document).ready(function () {
         console.log("Error:", error);
       });
   };
+
+  // Make the form slide up or down when the (new) "Compose" button, STRETCH
+  $("#iconAngle").on("click", () => {
+    $(".new-tweet form").slideToggle();
+  });
 });
