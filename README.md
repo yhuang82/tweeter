@@ -77,7 +77,3 @@ This repository serves as the starter code for the project. Students will fork a
 ### Contributing
 
 Contributions are welcome! Feel free to fork this repository and submit a pull request.
-
-### License
-
-This project is licensed under the [MIT License](LICENSE).
