@@ -21,9 +21,8 @@ $(document).ready(function () {
   });
 
   const renderTweets = function (tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets
+    // Sort tweets by creation time in descending order
+    tweets.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
     $(".tweets-container").empty();
     tweets.forEach((element) => {
       const $tweet = createTweetElement(element);
