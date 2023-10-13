@@ -20,6 +20,7 @@ $(document).ready(function () {
     $counter.toggleClass("invalid", remainingChars < 0);
   });
 
+  //loop the data base tweets
   const renderTweets = function (tweets) {
     // Sort tweets by creation time in descending order
     tweets.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
@@ -30,6 +31,7 @@ $(document).ready(function () {
     });
   };
 
+  //render each tweet to index
   const createTweetElement = function (tweet) {
     const { user, content, created_at } = tweet;
     // using the timeage to Displaying the Time Passed Since a Tweet
@@ -71,6 +73,7 @@ $(document).ready(function () {
     // Validate tweet content length
     const tweetContent = $("#tweet-text").val();
     const alertEmoji = "\u26A0\uFE0F"; // Unicode escape sequences for alert emoji
+
     if (tweetContent.trim().length === 0) {
       // Display error message
       $("#error-message")
@@ -89,11 +92,13 @@ $(document).ready(function () {
         .slideDown();
       return;
     }
+
     // Escape the tweet content to make it safe for display in alerts
     //<script>alert("XSS attack!");</script>
     const safeTweetContent = $("<div>").text(tweetContent).html();
     const serializedData = { text: safeTweetContent };
 
+    // POST tweets to the server
     $.ajax({
       url: "/tweets/",
       method: "POST",
@@ -111,6 +116,7 @@ $(document).ready(function () {
     $(".counter").text("140"); // Reset the character counter
   });
 
+  // GET tweets from the server
   const loadTweets = function () {
     $.ajax({
       url: "/tweets/",

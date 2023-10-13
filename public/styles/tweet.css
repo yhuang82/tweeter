@@ -33,11 +33,10 @@
   margin: 10px 10px 10px 10px;
 }
 
-.user-details h3, p {
+.user-details h3,
+p {
   margin: 10px 10px 10px 10px;
 }
-
-
 
 .tweet-content {
   height: 130px;

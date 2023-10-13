@@ -29,17 +29,15 @@ nav span {
   padding: 1.5em;
 }
 
-
-
 #newTweetNav {
   font-family: sans-serif;
 }
 
-
 /* for the clickable icon in the nav bar */
 
 @keyframes rockingAnimation {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0); /* Start and end position */
   }
   50% {
@@ -59,9 +57,6 @@ nav span {
   cursor: pointer;
   animation: none; /* Pause the rocking on hover */
 }
-
-
-
 
 /* for responsive design */
 @media only screen and (min-width: 1024px) {
