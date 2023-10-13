@@ -37,7 +37,7 @@ main {
   margin-top: 525px;
   background-color: inherit;
   padding: 20px;
-  text-align: center;
+  /* text-align: center; */
   display: flex;
   flex-direction: column;
 }

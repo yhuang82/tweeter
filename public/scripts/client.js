@@ -38,11 +38,11 @@ $(document).ready(function () {
       <article class="tweet">
         <header>
           <div class="user-info">
+          <div class="user-details">
             <img src="${user.avatars}" alt="Profile Image">
-            <div class="user-details">
-              <h3>${user.name}</h3>
+            <h3>${user.name}</h3>
+          </div>
               <p>${user.handle}</p>
-            </div>
           </div>
         </header>
         <div class="tweet-content">
@@ -51,7 +51,7 @@ $(document).ready(function () {
         <footer>
           <p>${whenCreated}</p>
           <div class="tweet-actions">
-            <i class="fas fa-reply icon-blue"></i>
+            <i class="fas fa-flag icon-red"></i>
             <i class="fas fa-retweet icon-blue"></i>
             <i class="fas fa-heart icon-red"></i>
           </div>
@@ -106,6 +106,9 @@ $(document).ready(function () {
       .catch(function (error) {
         console.log("Error:", error);
       });
+
+    $("#tweet-text").val(""); // Clear the textarea
+    $(".counter").text("140"); // Reset the character counter
   });
 
   const loadTweets = function () {
@@ -124,6 +127,11 @@ $(document).ready(function () {
 
   // Make the form slide up or down when the (new) "Compose" button, STRETCH
   $("#iconAngle").on("click", () => {
-    $(".new-tweet form").slideToggle();
+    $(".new-tweet form").slideToggle("fast", function () {
+      // If the Compose Tweet box is visible, auto-focus the textarea
+      if ($(".new-tweet").is(":visible")) {
+        $("#tweet-text").focus();
+      }
+    });
   });
 });

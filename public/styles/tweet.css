@@ -28,14 +28,16 @@
 .user-details {
   height: 50px;
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   justify-content: center;
+  margin: 10px 10px 10px 10px;
 }
 
-.user-details h3,
-p {
-  margin: 0;
+.user-details h3, p {
+  margin: 10px 10px 10px 10px;
 }
+
+
 
 .tweet-content {
   height: 130px;
