@@ -66,7 +66,34 @@ $(document).ready(function () {
   //Form Submission using JQuery
   $("form").on("submit", function (event) {
     event.preventDefault();
-    const serializedData = $(this).serialize();
+    // Hide the error message
+    $("#error-message").slideUp();
+
+    // Validate tweet content length
+    const tweetContent = $("#tweet-text").val();
+    const alertEmoji = "\u26A0\uFE0F"; // Unicode escape sequences for alert emoji
+    if (tweetContent.trim().length === 0) {
+      // Display error message
+      $("#error-message")
+        .text(alertEmoji + "Tweet content is empty. Please enter your tweet.")
+        .slideDown();
+      return; // Don't proceed with submission
+    }
+
+    if (tweetContent.length > 140) {
+      // Display error message
+      $("#error-message")
+        .text(alertEmoji +
+          "Tweet content exceeds the maximum character limit (140 characters)."
+        )
+        .slideDown();
+      return;
+    }
+    // Escape the tweet content to make it safe for display in alerts
+    //<script>alert("XSS attack!");</script>
+    const safeTweetContent = $("<div>").text(tweetContent).html();
+    const serializedData = { text: safeTweetContent };
+
     $.ajax({
       url: "/tweets/",
       method: "POST",
@@ -88,7 +115,6 @@ $(document).ready(function () {
       dataType: "json",
     })
       .then(function (response) {
-        console.log(response);
         renderTweets(response);
       })
       .catch(function (error) {
