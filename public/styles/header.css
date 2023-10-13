@@ -1,19 +1,27 @@
 .user-profile {
   height: 520px; /* Height minus nav height */
   width: 100%;
-  background-color: #DAA520;
+  background-color: #daa520;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+  position: fixed;
+  top: 0;
 }
 .user-profile h2 {
-  margin-top: -35px; /* Adjust spacing from avatar to name */
+  margin-top: -15px; /* Adjust spacing from avatar to name */
   font-size: 45px; /* Adjust as needed */
   font-weight: bold;
   color: #fdfdfd; /* Name color */
 }
 
-
-
+@media only screen and (min-width: 1024px) {
+  .user-profile {
+    margin: 150px 50px 50px 50px;
+    width: 33.3%;
+    justify-content: center;
+    position: relative;
+  }
+}

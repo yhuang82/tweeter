@@ -1,13 +1,17 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056a1;
+  background-color: rgba(171, 205, 239, 0); /* Adjust alpha (transparency) as needed */
   color: #ffffff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   position: fixed;
+  z-index: 6;
+  top: 0;
 }
+
+
 
 nav span {
   font-size: xx-large;
@@ -30,4 +34,12 @@ nav span {
 
 #newTweetNav {
   font-family: sans-serif;
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: rgb(57, 57, 191);
+  }
 }

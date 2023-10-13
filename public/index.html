@@ -3,6 +3,11 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <!-- Disabling Viewport Zooming -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
 
     <!-- External CSS -->
     <link
@@ -70,35 +75,39 @@
         ></i>
       </div>
     </nav>
-    <header class="user-profile">
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <h2>Your Name</h2>
-      </div>
-    </header>
+    <div class="container-desktop">
+      <header class="user-profile">
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <br />
+        <div>
+          <h2>AB51K</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <div id="error-message"></div>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <div id="error-message"></div>
 
-      <section class="new-tweet">
-        <form action="/tweets/" method="POST">
-          <label for="tweet-text"></label>
-          <textarea
-            name="text"
-            id="tweet-text"
-            placeholder="What are you humming about?"
-          ></textarea>
-          <div class="button-submit">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-        <div class="tweets-container"></div>
-      </section>
-    </main>
+        <section class="new-tweet">
+          <form action="/tweets/" method="POST">
+            <label for="tweet-text"></label>
+            <textarea
+              name="text"
+              id="tweet-text"
+              placeholder="What are you humming about?"
+            ></textarea>
+            <div class="button-submit">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+          <div class="tweets-container"></div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
