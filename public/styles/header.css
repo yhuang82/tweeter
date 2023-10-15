@@ -7,7 +7,6 @@
   justify-content: flex-end;
   align-items: center;
   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
-  position: fixed;
   top: 0;
 }
 .user-profile h2 {

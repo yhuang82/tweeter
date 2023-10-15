@@ -51,11 +51,11 @@ const createTweetElement = function (tweet) {
         </div>
         <footer>
           <p>${whenCreated}</p>
-          <div class="tweet-actions">
-            <i class="fas fa-flag icon-red"></i>
-            <i class="fas fa-retweet icon-blue"></i>
-            <i class="fas fa-heart icon-red"></i>
-          </div>
+          <ul class="tweet-actions">
+            <li><i class="fas fa-flag icon-red"></i></li>
+            <li><i class="fas fa-retweet icon-blue"></i></li>
+            <li><i class="fas fa-heart icon-red"></i></li>
+          </ul>
         </footer>
       </article>
     `);

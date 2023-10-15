@@ -1,12 +1,8 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: rgba(
-    171,
-    205,
-    239,
-    0
-  ); /* Adjust alpha (transparency) as needed */
+  background-color: #daa520;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
   color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -62,5 +58,6 @@ nav span {
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: rgb(57, 57, 191);
+    background-image: none;
   }
 }
