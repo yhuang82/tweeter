@@ -60,6 +60,10 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/form.js"></script>
+    <script type="text/javascript" src="/scripts/button.js"></script>
+
   </head>
   <body>
     <!-- Top nav bar (fixed) -->
@@ -85,7 +89,7 @@
       <main class="container">
         <div id="error-message"></div>
         <section class="new-tweet">
-          <form action="/tweets/" method="POST">
+          <form action="/tweets/" method="POST" class="newtweet-form">
             <label for="tweet-text"></label>
             <textarea
               name="text"
@@ -99,7 +103,7 @@
               >
             </div>
           </form>
-          <div class="tweets-container"></div>
+          <section class="tweets-container"></section>
         </section>
       </main>
     </div>

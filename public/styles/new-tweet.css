@@ -43,14 +43,15 @@ section.new-tweet button:hover {
   background-color: #2980b9;
 }
 
-section.new-tweet .counter {
-  font-size: 20px;
-  color: #000;
+.counter {
   font-family: "Bungee", sans-serif;
+  font-size: 1em;
+  margin-right: 8px;
+  margin: .6em;
 }
 
-.counter.invalid {
-  color: red !important;
+.form--red {
+  color: red;
 }
 
 #error-message {
