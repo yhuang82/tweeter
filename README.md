@@ -69,6 +69,13 @@ This repository serves as the starter code for the project. Students will fork a
 - Clears the textarea and resets the Character Counter after a valid tweet is submitted.
 
 ### Stretch Goals
+- Form toggle
+When the form appears (slides down), the user has to then click on the text area to begin typing. Ideally the form should enable the textarea automatically so that the user can begin typing right after clicking the button.
+
+- Add a Second Toggle Button
+The bottom button should only display when the user starts to scroll and the nav button should disappear.
+The bottom button should disappear and the nav button should reappear when the user scrolls back to the top.
+When clicked the page should scroll to the top and the form should slide down with the textarea enabled.
 
 **Navigation Bar**:
 
