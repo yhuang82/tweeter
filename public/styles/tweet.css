@@ -44,6 +44,15 @@ p {
   border-bottom: 3px solid black; /* Add black horizontal line */
 }
 
+.tweet-actions {
+  list-style: none; /* Remove default list styles */
+  display: flex; /* Use flexbox to align items in a row */
+}
+
+.tweet-actions li {
+  margin-right: 10px; /* Adjust spacing between icons */
+}
+
 .tweet footer {
   display: flex;
   flex-flow: row;
